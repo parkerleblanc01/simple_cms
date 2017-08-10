@@ -1,0 +1,16 @@
+<%= link_to("<< Back to List", subjects_path, :class => 'back-link') %>
+
+<div class="subjects edit">
+  <h2>Update Subject</h2>
+
+  <!--Using the form_for function we dont have to specify the url and method it does this automatically -->
+  <%= form_for(@subject) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Update Subject") %>
+    </div>
+
+  <% end %>
+</div>
